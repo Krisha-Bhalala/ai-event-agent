@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tech Event Matcher Agent</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Page header -->
+            <div class="header">
+                <h1>Tech Event Matcher Agent</h1>
+                <p>
+                    Multi-step AI agent that autonomously finds your perfect
+                    tech events
+                </p>
+            </div>
+
+            <!-- Main input area -->
+            <div class="main-card">
+                <h2>Tell Us About Yourself</h2>
+
+                <!-- Location input -->
+                <div class="input-section">
+                    <label for="locationInput">Your Location</label>
+                    <input
+                        type="text"
+                        id="locationInput"
+                        class="text-input"
+                        placeholder="e.g., Winnipeg, Manitoba or Remote"
+                    />
+                </div>
+
+                <!-- Interests input -->
+                <div class="input-section">
+                    <label for="interestsInput"
+                        >Your Interests and Skills</label
+                    >
+                    <textarea
+                        id="interestsInput"
+                        class="text-area"
+                        placeholder="e.g., AI, web development, mobile apps, machine learning"
+                    ></textarea>
+                </div>
+
+                <!-- Experience level -->
+                <div class="input-section">
+                    <label for="levelSelect">Experience Level</label>
+                    <select id="levelSelect" class="select-input">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate" selected>
+                            Intermediate
+                        </option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <!-- Goals input -->
+                <div class="input-section">
+                    <label for="goalsInput">What Are Your Goals?</label>
+                    <textarea
+                        id="goalsInput"
+                        class="text-area"
+                        placeholder="e.g., Find internships, learn new skills, network with professionals"
+                    ></textarea>
+                </div>
+
+                <!-- Budget preference -->
+                <div class="input-section">
+                    <label for="budgetSelect">Budget Preference</label>
+                    <select id="budgetSelect" class="select-input">
+                        <option value="free" selected>Free events only</option>
+                        <option value="low">Up to $50</option>
+                        <option value="medium">Up to $200</option>
+                        <option value="any">Any budget</option>
+                    </select>
+                </div>
+
+                <!-- Action buttons -->
+                <div class="button-group">
+                    <button class="search-btn" onclick="runAgent()">
+                        Start Agent
+                    </button>
+                    <button class="clear-btn" onclick="clearAll()">
+                        Clear All
+                    </button>
+                </div>
+
+                <!-- Quick examples -->
+                <div class="examples">
+                    <h3>Quick fill examples</h3>
+                    <button
+                        class="example-btn"
+                        onclick="loadExample('student')"
+                    >
+                        CS Student
+                    </button>
+                    <button
+                        class="example-btn"
+                        onclick="loadExample('developer')"
+                    >
+                        Junior Developer
+                    </button>
+                    <button
+                        class="example-btn"
+                        onclick="loadExample('researcher')"
+                    >
+                        Researcher
+                    </button>
+                </div>
+            </div>
+
+            <!-- Agent workflow visualization -->
+            <div class="results-card">
+                <div id="agentWorkflow" class="agent-workflow">
+                    <h2>Agent Workflow</h2>
+                    <div id="workflowSteps" class="workflow-steps"></div>
+                </div>
+            </div>
+
+            <!-- Final results -->
+            <div class="results-card" id="finalResults" style="display: none">
+                <h2>Your Personalized Event Recommendations</h2>
+                <div id="eventResults" class="event-results"></div>
+            </div>
+        </div>
+
+        <!-- Link to API key file -->
+        <script src="config.js"></script>
+
+        <!-- Link to main script -->
+        <script src="script.js"></script>
+    </body>
+</html>

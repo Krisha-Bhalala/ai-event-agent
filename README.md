@@ -15,3 +15,17 @@ This project is a web based AI Agent that provides personalized event recommenda
 - Match scoring system for events
 - Personalized recommendations and application tips
 - Example profiles for quick testing
+
+## Visual Overview
+
+### 1. User Profile Analysis
+![User Profile Analysis](assets/1.png)
+
+### 2. Search Strategy & Event Discovery
+![Search Strategy & Discovery](assets/2.png)
+
+### 3. Ranking & Match Scoring
+![Ranking & Match Scoring](assets/3.png)
+
+### 4. Final Report & Application Strategy
+![Final Report](assets/4.png)

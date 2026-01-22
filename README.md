@@ -29,3 +29,4 @@ This project is a web based AI Agent that provides personalized event recommenda
 
 ### 4. Final Report & Application Strategy
 ![Final Report](assets/4.png)
+
